@@ -1,4 +1,4 @@
-# Practice Session #1: Practice with RStudio Projects
+# Practice Session #1: Working with RStudio Projects
 
 ## Goal
 
