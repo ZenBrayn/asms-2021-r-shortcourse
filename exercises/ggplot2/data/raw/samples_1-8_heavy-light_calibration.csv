@@ -1,0 +1,10 @@
+Peptide,Protein,Replicate,Peptide Peak Found Ratio,Peptide Retention Time,Ratio To Standard,Quantification
+IEAIPQIDK,GST-tag,1,1,20.88,21.4506,Normalized Area: 8.9844E+7
+IEAIPQIDK,GST-tag,2,1,22.2,6.2565,Normalized Area: 3.3537E+7
+IEAIPQIDK,GST-tag,3,1,22.63,2.0416,Normalized Area: 1.0655E+7
+IEAIPQIDK,GST-tag,4,1,21.21,0.8244,Normalized Area: 3.4782E+6
+IEAIPQIDK,GST-tag,5,1,20.06,0.2809,Normalized Area: 1.3164E+6
+IEAIPQIDK,GST-tag,6,1,20.81,0.1156,Normalized Area: 5.9498E+5
+IEAIPQIDK,GST-tag,7,1,21.26,0.0819,Normalized Area: 4.4687E+5
+IEAIPQIDK,GST-tag,8,1,20.94,0.0248,Normalized Area: 1.3844E+5
+IEAIPQIDK,GST-tag,FOXN1-GST,0.9,20.88,0.7077,Normalized Area: 2.9685E+6
