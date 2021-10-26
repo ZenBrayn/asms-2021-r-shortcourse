@@ -67,9 +67,9 @@ While previous programming experience can be useful for learning R, it is not sp
 | 9:30 AM	 | 10:15 AM	| 45 min   | Introduction to Tidy Data & the Tidyverse          |
 | 10:15 AM	 | 10:45 AM	| 30 min   | Coffee Break                                       |
 | 10:45 AM	 | 11:30 AM	| 45 min   | Data Manipulation with dplyr                       |
-| 11:30 AM	 | 12:00 PM	| 30 min   | Practice session: dplyr examples                   |
+| 11:30 AM	 | 12:00 PM	| 30 min   | Practice session: tidyr & dplyr examples                   |
 | 12:00 PM	 | 1:00 PM	| 1 hr	   | Lunch                                              |
-| 1:00 PM	 | 1:15 PM	| 15 min   | Practice session: dplyr examples solutions         |
+| 1:00 PM	 | 1:15 PM	| 15 min   | Practice session: tidyr & dplyr examples solutions         |
 | 1:15 PM	 | 2:00 PM	| 45 min   | Visualization Basics with GGplot2                  |
 | 2:00 PM	 | 2:30 PM	| 30 min   | GGplot2 Extended Syntax                            |
 | 2:30 PM	 | 3:00 PM	| 30 min   | Coffee Break                                       |
