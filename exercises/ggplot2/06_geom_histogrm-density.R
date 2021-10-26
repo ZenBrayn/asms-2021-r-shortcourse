@@ -1,6 +1,5 @@
-# ASMS Short Course R::ggplots
+# ASMS Short Course R::ggplot
 # Jeff Jones
-# 2020-04-21
 
 library(tidyverse)
 library(ggplot2)
