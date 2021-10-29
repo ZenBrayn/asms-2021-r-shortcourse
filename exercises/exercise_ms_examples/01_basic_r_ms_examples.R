@@ -1,5 +1,5 @@
-# May Institute 2021: Introduction to R for Beginners
-# Day 1: First Steps with R Coding
+# ASMS 2021 R Short Course
+# Basic R Coding, MS Examples
 # 
 
 # Exercise #1 -- Working with Variables
