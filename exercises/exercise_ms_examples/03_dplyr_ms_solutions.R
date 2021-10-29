@@ -17,22 +17,27 @@ dat <- read_csv("data/Choi2017_DDA_Skyline_input.csv.zip", guess_max = 10000)
 # 2.1 In the previous exercises, we subsetted the data to rows
 #     for the protein "sp|P33399|LHP1_YEAST".  Repeat this using
 #     a dplyr pipeline instead.
-
+dat_subset <- dat %>%
+  filter(ProteinName == "sp|P33399|LHP1_YEAST")
 
 # 2.2 How many rows and columns did you get from 2.1, and how does this compare
 #     to the number of rows and columns you got when you subsetted the
 #     data using data frame indexing syntax (refer to the previous exercises).
-
+dim(dat_subset)
+# This is using [ ] syntax
+dim(dat[dat$ProteinName == "sp|P33399|LHP1_YEAST",])
 
 # 2.3 Subset the data further to rows for the protein "sp|P33399|LHP1_YEAST"
 #     and for the experiment file name "JD_06232014_sample1-A.raw".  Try
 #     writing a single dplyr pipeline that accomplishes this task starting from
 #     the original data you read in during 1.1 above.
-
+dat_subset_2 <- dat %>%
+  filter(ProteinName == "sp|P33399|LHP1_YEAST") %>%
+  filter(FileName == "JD_06232014_sample1-A.raw")
 
 # 2.4 Review the results from the subsetted data from 2.3 (hint: View).  Does
 #     Does the structure of the data make more sense now?
-
+View(dat_subset_2)
 
 # Exercise #3 -- Group By + Summarize
 #
@@ -40,20 +45,26 @@ dat <- read_csv("data/Choi2017_DDA_Skyline_input.csv.zip", guess_max = 10000)
 #     unique peptide sequences identified for each protein in the data.  If you were
 #     to do this in code, what column names would you need to consider to accomplish
 #     this task?
-
+# you'd need to use ProteinName and PeptideSequence in your expression
 
 # 3.2 Write a dplyr pipeline do the above task.  Does the code you wrote has similarities
 #     to the way you described the task in 3.1?
-
+dat %>%
+  group_by(ProteinName) %>%
+  summarize(n_peptides = length(unique(PeptideSequence)))
 
 # Exercise #4 -- Thinking more about dplyr verbs
 #
 # 4.1 What dplyr verb would you use to do the following things 
 #     (just identify the appropriate dplyr verb, not the code to do the task):
 #     - remove rows that contain DECOY proteins
+# filter
 #     - only show the columns ProteinName and PeptideSequence
+# select
 #     - only keep proteins that have at least 10 unique peptide sequences
+# group_by + summarize to count the peptides for each protein, then filter on the counts
 #     - order the data based on PrecursorMz
+# arrange
 
 
 # 4.2 A template for a dplyr pipeline is given below, but has missing information
@@ -68,11 +79,11 @@ dat <- read_csv("data/Choi2017_DDA_Skyline_input.csv.zip", guess_max = 10000)
 #    is needed.  You may not understand all the code, but try to guess base on the
 #    information provided.
 dat %>%
-  filter(!str_starts(***, "DECOY")) %>%
-  group_by(***) %>%
-  summarize(n_peptides = ***) %>%
-  filter(*** >= ***) %>%
-  arrange(desc(***))
+  filter(!str_starts(ProteinName, "DECOY")) %>%
+  group_by(ProteinName) %>%
+  summarize(n_peptides = length(unique(PeptideSequence))) %>%
+  filter(n_peptides >= 10) %>%
+  arrange(desc(n_peptides))
   
 
 
