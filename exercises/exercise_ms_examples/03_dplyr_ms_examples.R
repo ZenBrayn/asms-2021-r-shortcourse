@@ -1,5 +1,5 @@
-# May Institute 2021: Introduction to R for Beginners
-# Day 2: dplyr Basics
+# ASMS 2021 R Short Course
+# Working with dplyr, MS Examples
 # 
 
 # BE SURE TO LOAD THE TIDYVERSE LIBRARY
